@@ -200,3 +200,21 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #555;
 }
+
+#particleCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Position behind other content */
+    background-color: black;
+}
+
+.sucess-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
