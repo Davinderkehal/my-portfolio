@@ -37,28 +37,28 @@
                 <h3>Project 1</h3>
                 <button class="toggle-button">Show Details</button>
                 <div class="project-details hidden">
-                    <p>Details about Project 1...</p>
+                    <p>Project 1 details sample</p>
                 </div>
             </div>
             <div class="project">
                 <h3>Project 2</h3>
                 <button class="toggle-button">Show Details</button>
                 <div class="project-details hidden">
-                    <p>Details about Project 2...</p>
+                    <p>Project 2 details sample</p>
                 </div>
             </div>
             <div class="project">
                 <h3>Project 3</h3>
                 <button class="toggle-button">Show Details</button>
                 <div class="project-details hidden">
-                    <p>Details about Project 3...</p>
+                    <p>Project 3 details sample</p>
                 </div>
             </div>
             <div class="project">
                 <h3>Project 4</h3>
                 <button class="toggle-button">Show Details</button>
                 <div class="project-details hidden">
-                    <p>Details about Project 4...</p>
+                    <p>Project 4 details sample</p>
                 </div>
             </div>
         </div>
@@ -67,7 +67,21 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>In the future, this will be a contact form. For now, just leave this as a placeholder.</p>
+        <form id="contactForm" novalidate>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="nameError"></span>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error-message" id="messageError"></span>
+    
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer Section -->
