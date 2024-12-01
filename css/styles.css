@@ -222,3 +222,8 @@ form button[type="submit"]:hover {
 html {
     scroll-behavior: smooth;
 }
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}

@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Existing code for "Show Details" buttons
     const toggleButtons = document.querySelectorAll(".toggle-button");
 
     toggleButtons.forEach(button => {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             const details = this.nextElementSibling;
 
             if (details.style.display === "none" || details.style.display === "") {
@@ -15,61 +15,67 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+    //Add Dark Mode Toggle
+    const toggleThemeButton = document.getElementById('toggleTheme');
+    toggleThemeButton.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode');
+    });
 
-   // Form and validation logic
-const realForm = document.getElementById("contactForm");
-const name = document.getElementById("name");
-const email = document.getElementById("email");
-const message = document.getElementById("message");
 
-const nameError = document.getElementById("nameError");
-const emailError = document.getElementById("emailError");
-const messageError = document.getElementById("messageError");
-const successMessage = document.getElementById("successMessage");
+    // Form and validation logic
+    const realForm = document.getElementById("contactForm");
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
 
-realForm.addEventListener("submit", function(event) {
-    let isValid = true;
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
+    const successMessage = document.getElementById("successMessage");
 
-    // Clear previous error messages
-    nameError.textContent = "";
-    emailError.textContent = "";
-    messageError.textContent = "";
-    successMessage.style.display = "none"; // Hide success message initially
+    realForm.addEventListener("submit", function (event) {
+        let isValid = true;
 
-    // Validate Name
-    if (name.value.trim() === "") {
-        nameError.textContent = "Please enter your name.";
-        isValid = false;
-    }
+        // Clear previous error messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+        successMessage.style.display = "none"; // Hide success message initially
 
-    // Validate Email
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email.value)) {
-        emailError.textContent = "Please enter a valid email address.";
-        isValid = false;
-    }
+        // Validate Name
+        if (name.value.trim() === "") {
+            nameError.textContent = "Please enter your name.";
+            isValid = false;
+        }
 
-    // Validate Message
-    if (message.value.trim() === "") {
-        messageError.textContent = "Please enter your message.";
-        isValid = false;
-    }
+        // Validate Email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value)) {
+            emailError.textContent = "Please enter a valid email address.";
+            isValid = false;
+        }
 
-    // If any field is invalid, prevent form submission
-    if (!isValid) {
-        event.preventDefault();
-    } else {
-        // Prevent actual form submission for demo purposes
-        event.preventDefault();
+        // Validate Message
+        if (message.value.trim() === "") {
+            messageError.textContent = "Please enter your message.";
+            isValid = false;
+        }
 
-        // Display the success message if all validations pass
-        successMessage.style.display = "block";
-        successMessage.textContent = "Message has been successfully submitted!";
-        name.value = "";
-        email.value = "";
-        message.value = "";
-    }
-});
+        // If any field is invalid, prevent form submission
+        if (!isValid) {
+            event.preventDefault();
+        } else {
+            // Prevent actual form submission for demo purposes
+            event.preventDefault();
+
+            // Display the success message if all validations pass
+            successMessage.style.display = "block";
+            successMessage.textContent = "Message has been successfully submitted!";
+            name.value = "";
+            email.value = "";
+            message.value = "";
+        }
+    });
 
 
     const canvas = document.getElementById("particleCanvas");
@@ -91,7 +97,7 @@ realForm.addEventListener("submit", function(event) {
         this.dx = dx;
         this.dy = dy;
 
-        this.draw = function() {
+        this.draw = function () {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = "white";
@@ -99,7 +105,7 @@ realForm.addEventListener("submit", function(event) {
             ctx.closePath();
         };
 
-        this.update = function() {
+        this.update = function () {
             // Move particle
             this.x += this.dx;
             this.y += this.dy;
