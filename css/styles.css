@@ -218,3 +218,7 @@ form button[type="submit"]:hover {
     margin-top: 10px;
     display: none; /* Initially hidden */
 }
+
+html {
+    scroll-behavior: smooth;
+}
