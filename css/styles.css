@@ -73,6 +73,11 @@ footer {
     height: 30px;
 }
 
+footer p{
+    text-align: center;
+    color: whitesmoke;
+}
+
 /* Project Gallery Styles */
 .project-gallery {
     display: flex;
