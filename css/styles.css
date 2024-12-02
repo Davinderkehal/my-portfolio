@@ -8,12 +8,25 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: rgb#3a3a3a;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
+#about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff5e6;
+    color: #03192f; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color:#03192f;
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -39,13 +52,14 @@ nav ul li a:hover {
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background-color: #fff5e6;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    color: #3a3a3a;
+    color: #58264c;
+    text-align: center;
 }
 
 footer {
@@ -69,7 +83,7 @@ footer {
 
 .project {
     flex: 1 1 calc(33.333% - 1rem);
-    background-color: #f9f9f9;
+    background-color: #fff5e6;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -147,7 +161,17 @@ form label {
     display: block;
     font-weight: bold;
     color: #333;
+
     margin-bottom: 5px;
+}
+#contact {
+padding: 20px;
+margin: 20px;
+background-color: #fff5e6; /* Light orange background */
+color: #663300; /* Brown text */
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+font-family: Arial, sans-serif;
 }
 
 form input[type="text"],
